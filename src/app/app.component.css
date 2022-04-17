@@ -15,7 +15,7 @@
 }
 .header-bottom{
   display: flex;
-  height: 80px;
+  height: 400px;
   background-color: yellow;
   margin-top: 20px;
 }
@@ -26,6 +26,16 @@
 }
 .collapse navbar-collapse{
   display: flex;
+}
+a.nav-link.active{
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+a.nav-link.border.border-light.rounded{
+  list-style: none;
+  text-decoration: none; 
+  color: white;
 }
 .nav-item{
   padding: 8px;
