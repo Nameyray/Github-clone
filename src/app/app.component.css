@@ -19,6 +19,11 @@
   background-color: yellow;
   margin-top: 20px;
 }
+.row{
+  justify-content: center;
+  align-items: center;
+  margin-left: 450px;
+}
 .collapse navbar-collapse{
   display: flex;
 }
