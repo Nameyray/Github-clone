@@ -1,0 +1,50 @@
+
+
+.logo{
+  object-fit: contain;
+  width: 100px;
+  height: 50px;
+  margin: 12ps 20px 0px 2px;
+}
+.header-top{
+  display: flex;
+  height: 60px;
+  background-color: black;
+  padding-right: 8px;
+  
+}
+.header-bottom{
+  display: flex;
+  height: 80px;
+  background-color: yellow;
+  margin-top: 20px;
+}
+.collapse navbar-collapse{
+  display: flex;
+}
+.nav-item{
+  padding: 8px;
+}
+.nav-link active{
+  color: white;
+}
+.navbar-nav{
+  display: flex;
+  margin: 8px;
+}
+.header-input{
+  margin: 20px;
+  margin-top: 3px;
+  height: 50%;
+}
+.nav-item1{
+  text-align: right;
+  display: flex;
+  margin-left: 200%;
+  margin-top: 0.01%;
+}
+.container{
+  height: 100vh;
+  display: contents;
+  
+}
