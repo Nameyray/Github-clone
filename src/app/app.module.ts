@@ -8,6 +8,8 @@ import { FormSearchComponent } from './components/form-search/form-search.compon
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { DatePipe } from './date.pipe';
 import { RepositoryComponent } from './components/repository/repository.component';
+import { FormsModule, NgForm } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,10 @@ import { RepositoryComponent } from './components/repository/repository.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

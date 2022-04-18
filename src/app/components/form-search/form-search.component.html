@@ -1,11 +1,18 @@
-<div class="row">
-  <form name="gitForm">
+<div class="row" *ngIf="isForm">
+  <form name="gitForm" #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
     <div class="row">
       <div class="col-md-6"></div>
       <div class="col-md-12">
-        <input type="text" class="form-control input-lg mb15 user-input" id="username" name="Username" autocomplete="off" placeholder="GitHub Username">
+        <input type="text" class="form-control input-lg mb15 user-input" id="username" name="Username" autocomplete="off" placeholder="GitHub Username" 
+        [(ngModel)]="user" #userInput="ngModel">
         <button type="submit" class="btn btn success btn- lg btn-block">Search GitHub User</button>
       </div>
     </div>
   </form>
+  
+</div>
+<div class="container bg-dark"  *ngIf="isUser">
+  <div class="col-6"> {{user}} </div>
+  <div class="col-6"> {{public_repos}}</div>
+
 </div>
