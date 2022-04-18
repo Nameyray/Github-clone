@@ -20,6 +20,13 @@ export class FormSearchComponent implements OnInit {
   repoData :any = []; 
   newUserData :any = []; 
   repoDetails= []
+  userData = {
+    name: "",
+    avatar_url: "",
+    created_at: "",
+    updated_at: ""
+
+  }
 //   let headers = new HttpHeaders();
 // headers = headers.set('Authorization', 'Basic xzeydyt==');
 
@@ -31,6 +38,8 @@ export class FormSearchComponent implements OnInit {
      login: string;
      name: string;
      public_repos: string;
+     created_at: string;
+     updated_at: string;
    }
     this.http.get<usersResponse>('https://api.github.com/users/' +this.user    
     ).toPromise().then(response=>{
@@ -39,6 +48,10 @@ export class FormSearchComponent implements OnInit {
      this.user= response!.login
      this.user= response!.name 
      this.public_repos= response!.public_repos
+     this.userData.name= response!.name
+     this.userData.avatar_url= response!.avatar_url 
+     this.userData.created_at= response!.created_at
+     this.userData.updated_at= response!.updated_at
 
     })
     this.http.get<any>("https://api.github.com/users/" + this.user + "/repos").toPromise().then(response=>{

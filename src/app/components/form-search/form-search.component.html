@@ -12,17 +12,19 @@
   
 </div>
 <div class="container bg-dark"  *ngIf="isUser">
-  <div class="col-6">Name: {{user}} </div>
-  <!-- <img src="{{user.avatar_url}}"> -->
+  <div class="col-6">Name: {{userData.name}} </div>
+  <img src="{{userData.avatar_url}}" class="repo-image">
+  <div class="col-6">Date Joined: {{userData.created_at}}</div>
+  <div class="col-6">Last Updated: {{userData.updated_at}}</div>
   <div class="col-6">Number of Repositories: {{public_repos}}</div>
   <div class="row">
     <div class="col-md-1">
       <div class="col-md-4" *ngFor='let repoDetail of repoDetails'>
         <h3>{{repoDetail['name']}}</h3>
        <p class="bio"></p>
-       <p class="stat">Date Joined:  <strong>{{repoDetail['created_at']}}</strong></p>
+       <p class="stat">Created at:  <strong>{{repoDetail['created_at']}}</strong></p>
        <p class="stat">Last Update:  <strong>{{repoDetail['updated_at']}}</strong></p>
-       <p class="stat">Number of Repos: <strong>{{repoDetail['public_repos']}}</strong></p>
+       <p class="stat"> <strong></strong></p>
        <p class="stat"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;<a href="" target="_blank">View Github Profile</a></p>
       </div>
     </div>
