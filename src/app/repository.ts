@@ -1,3 +1,4 @@
+import * as moment from 'moment';
 export class Repository {
   constructor(
     public name: string, 

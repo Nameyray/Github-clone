@@ -13,6 +13,7 @@ export class FormSearchComponent implements OnInit {
   user: String = "";
   public_repos!: String;
 
+
   apiKey: String = "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";
 
   repository:Repository;
@@ -26,6 +27,7 @@ export class FormSearchComponent implements OnInit {
     this.repoData.length = 0;
 
    interface usersResponse{
+     avatar_url: string;
      login: string;
      name: string;
      public_repos: string;
@@ -33,6 +35,7 @@ export class FormSearchComponent implements OnInit {
     this.http.get<usersResponse>('https://api.github.com/users/' +this.user    
     ).toPromise().then(response=>{
      console.log(response)
+     this.user= response!.avatar_url
      this.user= response!.login
      this.user= response!.name 
      this.public_repos= response!.public_repos
@@ -40,6 +43,7 @@ export class FormSearchComponent implements OnInit {
     })
     this.http.get<any>("https://api.github.com/users/" + this.user + "/repos").toPromise().then(response=>{
       // We then pass the interface with the get method. 
+      console.log(response)
       for(var i=0; i<response.length; i++)
       {
         // If the response is successful we create a new Repository instance and passing in the response properties. We then assign this new Repository instance to the newUserData property.
